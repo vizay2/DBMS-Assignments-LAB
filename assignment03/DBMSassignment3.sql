@@ -1,3 +1,4 @@
+
 CREATE TABLE Department (
   2      DepartmentID VARCHAR(10) PRIMARY KEY,
   3      DepartmentName VARCHAR(100),
@@ -39,21 +40,21 @@ SQL> CREATE TABLE Course (
   8      FOREIGN KEY (FacultyID) REFERENCES Faculty(FacultyID)
   9  );
 
-Table created.
 
-SQL> CREATE TABLE Enrollment (
-  2      StudentID VARCHAR(10),
-  3      CourseID VARCHAR(10),
-  4      Semester VARCHAR(20),
-  5      Grade CHAR(2),
-  6      PRIMARY KEY (StudentID, CourseID),
-  7      FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
-  8      FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
-  9  );
 
-Table created.
+ CREATE TABLE Enrollment (
+    StudentID VARCHAR(10),
+    CourseID VARCHAR(10), 
+    Semester VARCHAR(20),
+     Grade CHAR(2),
+     PRIMARY KEY (StudentID, CourseID),
+     FOREIGN KEY (StudentID) REFERENCES Student(StudentID),
+     FOREIGN KEY (CourseID) REFERENCES Course(CourseID)
+   );
 
-SQL> INSERT INTO Department VALUES(101,'CE','Block_A');
+
+
+INSERT INTO Department VALUES(101,'CE','Block_A');
 
 1 row created.
 
@@ -315,3 +316,4 @@ Commit complete.
 
 SQL> SAVE assignments.sql
 Created file assignments.sql
+
