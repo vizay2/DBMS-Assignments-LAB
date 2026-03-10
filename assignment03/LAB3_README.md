@@ -2,7 +2,7 @@
 ## Data Collection and Data Insertion in College Database
 
 ### Objective
-The objective of this lab is to understand how real-world data is collected from authentic sources and inserted into a relational database using SQL. This lab focuses on maintaining data accuracy, consistency, and proper use of primary and foreign key constraints.
+The objective of the lab is to understand how real-world data is collected from official sources and inserted into a relational database using SQL. The lab focuses on maintaining data accuracy, consistency, and proper use of primary and foreign key constraints.
 
 ---
 
@@ -31,10 +31,10 @@ Only real and verifiable academic information is used.
 
 ### 1. Department
 Attributes collected:
-- Department ID (self-defined)
+- Department ID (as per official records)
 - Department Name (as per official records)
 - Office Location / Block  
-  (If exact location is not available, use Block A, Block B, etc.)
+  (self defined)
 
 **Source:**  
 College website or official department pages
@@ -43,7 +43,7 @@ College website or official department pages
 
 ### 2. Faculty
 Attributes collected:
-- Faculty ID (self-defined)
+- Faculty ID (as per official records)
 - Faculty Name
 - Designation
 - Official Email ID
@@ -56,11 +56,11 @@ Department faculty list or class timetable
 
 ### 3. Course
 Attributes collected:
-- Course ID (self-defined)
+- Course ID (as per official records)
 - Course Name (as per syllabus)
 - Credits
 - Department ID
-- Faculty ID (faculty teaching the course)
+- Faculty ID (self defined)
 
 **Source:**  
 Syllabus document or academic timetable
@@ -73,7 +73,7 @@ Attributes collected:
 - Student Name
 - Date of Birth
 - Gender
-- Contact Number (dummy numbers only)
+- Contact Number (random numbers allotted)
 - Department ID
 
 ⚠️ **Note:**  
@@ -113,4 +113,5 @@ Academic structure and assumptions for grades
 ### Part B: Verification
 - Execute the following query for each table:
   ```sql
+
   SELECT * FROM table_name;
