@@ -56,61 +56,24 @@ SQL> CREATE TABLE Course (
 
 INSERT INTO Department VALUES(101,'CE','Block_A');
 
-1 row created.
+INSERT INTO Department VALUES(157,'CSE(AIML)','Block_B');
 
-SQL> INSERT INTO Department VALUES(157,'CSE(AIML)','Block_B');
+INSERT INTO Department VALUES(105,'CSE','Block_C');
 
-1 row created.
+INSERT INTO Department VALUES(103,'EEE','Block_D');
+INSERT INTO Department VALUES(102,'ME','Block_E');
+INSERT INTO Department VALUES(118,'3-DAG','Block_F');
 
-SQL> INSERT INTO Department VALUES(105,'CSE','Block_C');
+INSERT INTO Department VALUES(106,'IT','Block_G');
+INSERT INTO Department VALUES(104,'ECE','Block_H');
 
-1 row created.
-
-SQL> INSERT INTO Department VALUES(103,'EEE','Block_D');
-
-1 row created.
-
-SQL> INSERT INTO Department VALUES(102,'ME','Block_E');
-
-1 row created.
-
-SQL> INSERT INTO Department VALUES(118,'3-DAG','Block_F');
-
-1 row created.
-
-SQL> INSERT INTO Department VALUES(106,'IT','Block_G');
-
-1 row created.
-
-SQL> INSERT INTO Department VALUES(104,'ECE','Block_H');
-
-1 row created.
-
-SQL> INSERT INTO Department VALUES(119,'CEWCA','Block_I');
-
-1 row created.
-
-SQL> INSERT INTO Department VALUES(153,'DATA SCIENCE','Block_J');
-
-1 row created.
-
-SQL> INSERT INTO Faculty VALUES (1001, 'Prof. Murlidhar Prasad Singh', 'Assistant Professor and HOD', 'singhmurlidhar@gmail.com', 105);
-
-1 row created.
-
-SQL> INSERT INTO Faculty VALUES (1002, 'Prof. Arun Kumar', 'Assistant Professor(Guest)', 'arunkr75@gmail.com', 157);
-
-1 row created.
-
-SQL> INSERT INTO Faculty VALUES (1003, 'Prof. Manisha Kumari Singh', 'Assistant Professor', 'manisha.ks241@gmail.com', 118);
-
-1 row created.
-
-SQL> INSERT INTO Faculty VALUES (1004, 'Prof. Sujeet Kumar', 'Assistant Professor', 'ksujeet.cs@gmail.com', 157);
-
-1 row created.
-
-SQL> INSERT INTO Faculty VALUES (1005, 'Prof. Praveen Kumar', 'Assistant Professor', 'praveenkumaryadav782@gmail.com', 153);
+INSERT INTO Department VALUES(119,'CEWCA','Block_I');
+INSERT INTO Department VALUES(153,'DATA SCIENCE','Block_J');
+INSERT INTO Faculty VALUES (1001, 'Prof. Murlidhar Prasad Singh', 'Assistant Professor and HOD', 'singhmurlidhar@gmail.com', 105);
+INSERT INTO Faculty VALUES (1002, 'Prof. Arun Kumar', 'Assistant Professor(Guest)', 'arunkr75@gmail.com', 157);
+INSERT INTO Faculty VALUES (1003, 'Prof. Manisha Kumari Singh', 'Assistant Professor', 'manisha.ks241@gmail.com', 118);
+INSERT INTO Faculty VALUES (1004, 'Prof. Sujeet Kumar', 'Assistant Professor', 'ksujeet.cs@gmail.com', 157);
+INSERT INTO Faculty VALUES (1005, 'Prof. Praveen Kumar', 'Assistant Professor', 'praveenkumaryadav782@gmail.com', 153);
 
 1 row created.
 
@@ -316,4 +279,5 @@ Commit complete.
 
 SQL> SAVE assignments.sql
 Created file assignments.sql
+
 
