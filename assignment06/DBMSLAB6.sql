@@ -106,4 +106,4 @@ SELECT Semester, COUNT(StudentID) AS Total_Students
    GROUP BY c.CourseName
    HAVING COUNT(e.StudentID) > 2;
 
- SAVE DBMSDBMSLAB6.sql
+ SAVE DBMSLAB6.sql
