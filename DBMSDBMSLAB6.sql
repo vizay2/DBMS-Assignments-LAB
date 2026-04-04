@@ -1,5 +1,5 @@
 
-SQL> SELECT COUNT(*) AS Total_Students
+ SELECT COUNT(*) AS Total_Students
   2    FROM Student;
 
 TOTAL_STUDENTS
