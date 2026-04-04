@@ -35,40 +35,36 @@ SELECT DepartmentID, COUNT(*) AS No_Of_Faculty
     FROM Enrollment
     GROUP BY Semester;
 --------------QUESTION 10--------------
- SELECT Semester, COUNT(*) AS Total_Enrollments
-   FROM Enrollment
-   GROUP BY Grade;
------------------------------------------- PART C------------------------------------------
---------------QUESTION 11--------------
  SELECT Grade, COUNT(*) AS Total_Enrollments
     FROM Enrollment
     GROUP BY Grade;
---------------QUESTION 12--------------
+------------------------------------------ PART C------------------------------------------
+--------------QUESTION 11--------------
  SELECT DepartmentID, COUNT(*) AS Total_Students
    FROM Student
    GROUP BY DepartmentID
   HAVING COUNT(*) > 3;
---------------QUESTION 13--------------
+--------------QUESTION 12--------------
  SELECT Semester, COUNT(*) AS Total_Enrollments
  FROM Enrollment
  GROUP BY Semester
  HAVING COUNT(*) > 2;
---------------QUESTION 14--------------
-
- SELECT Grade, COUNT(*) AS Count_Grade
+--------------QUESTION 13--------------
+  SELECT Grade, COUNT(*) AS Count_Grade
    FROM Enrollment
    GROUP BY Grade
    HAVING COUNT(*) > 1;
------------------------------------------- PART D------------------------------------------
---------------QUESTION 15--------------
+--------------QUESTION 14--------------
  SELECT DepartmentID, COUNT(*) AS Total_Courses
    FROM Course
     GROUP BY DepartmentID
     HAVING COUNT(*) > 1;
--------------- QUESTION 16--------------
-SQL> SELECT CourseID, COUNT(StudentID) AS Enrolled_Students
-  2  FROM Enrollment
-  3  GROUP BY CourseID;
+
+------------------------------------------ PART D------------------------------------------
+--------------QUESTION 15--------------
+SELECT CourseID, COUNT(StudentID) AS Enrolled_Students
+   FROM Enrollment
+   GROUP BY CourseID;
 -------------- QUESTION 16--------------
  SELECT c.CourseName, COUNT(e.StudentID) AS Enrolled_Students
    FROM Course c
@@ -110,3 +106,4 @@ SELECT Semester, COUNT(StudentID) AS Total_Students
    GROUP BY c.CourseName
    HAVING COUNT(e.StudentID) > 2;
 
+ SAVE DBMSDBMSLAB6.sql
