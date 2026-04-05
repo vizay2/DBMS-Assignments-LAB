@@ -51,11 +51,3 @@ FROM Student;
 ✔ Students per course
 ✔ Course name with enrolled students
 ✔ Students per department
-✔ Faculty with number of courses taught
-
-🅴 Part E: Analytical Queries
-
-✔ Maximum grade per course
-✔ Courses per department
-✔ Students per semester
-✔ Courses with more than 2 students
