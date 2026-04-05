@@ -2,71 +2,66 @@
 
 ✨ This project demonstrates SQL read-only queries used to retrieve and analyze data from database tables without modifying them.
 
-🎯 Objective
+📘LAB 4
+📌 Project Description
+This project focuses on retrieving information from a database using SQL without making any changes to the actual data. It helps in understanding how to view, filter, arrange, and calculate data stored in tables using SQL queries.
 
-🔹 Understand how to extract meaningful data using SQL
-🔹 Apply filtering, sorting, and aliasing
-🔹 Generate computed results from existing data
+The database contains tables such as Student, Faculty, Course, and Enrollment, and all queries are written using read-only SQL commands.
 
-🧠 Concepts Covered
-💡 Concept	📖 Description
-🔍 Data Retrieval	Fetch records using SELECT
-🏷️ Aliasing	Rename columns using AS
-🎯 Filtering	Use WHERE clause
-🔄 Sorting	Use ORDER BY
-🔢 Limiting	Restrict rows using LIMIT
-📊 Computation	Generate derived outputs
-📅 Date Handling	Work with DOB & age
-🛠️ Sample Queries
-🟢 Retrieve Data
+🎯 Purpose of the Project
+The main purpose of this project is to:
+
+Learn how to fetch data from database tables
+
+Improve readability of query output using column aliases
+
+Apply conditions to display specific records
+
+Sort and limit query results
+
+Perform calculations on data without updating the table
+
+🛠️ Concepts Explained
+🔹 Data Retrieval (SELECT)
+
+Used to display data stored in tables. Example:
+
 SELECT * FROM Student;
-🔵 Alias Example
-SELECT StudentID AS Roll_No, Name AS Student_Name
-FROM Student;
-🟡 Filtering
-SELECT * FROM Student
-WHERE DepartmentID = 'D101';
-🟣 Sorting
-SELECT Name FROM Student
-ORDER BY Name ASC;
-🔴 Computed Output
-SELECT Name, YEAR(CURDATE()) - YEAR(DOB) AS Age
-FROM Student;
-🧪 Lab Tasks
-🅰️ Basic Display
 
-✔ Use aliases for all tables
-✔ Display selected columns with new names
+This shows all student records.
 
-🅱️ Conditional Queries
+🔹 Column Alias (AS)
 
-✔ Filter by department, gender, designation
-✔ Apply conditions on DOB and credits
+Aliases give temporary names to columns in the output, making results easier to understand. They do not change the actual column names.
 
-🅲 Sorting & Limiting
+🔹 Filtering Data (WHERE)
 
-✔ Sort records (ASC/DESC)
-✔ Display limited rows
+Used to display records that satisfy specific conditions such as department, gender, or date.
 
-🅳 Computed Output
+🔹 Sorting Results (ORDER BY)
 
-✔ Calculate age
-✔ Modify output values
-✔ Extract year/email domain
+Arranges data in ascending or descending order to make results organized and readable.
 
+🔹 Limiting Records (LIMIT)
 
-✅ Strong understanding of SQL queries
-✅ Ability to analyze structured data
-✅ Hands-on practice with real-world database scenarios
+Restricts the number of rows displayed in the output.
 
-🌟 Highlights
+🔹 Derived / Computed Output
 
-✨ Clean and readable SQL queries
-✨ Real-world lab-based practice
-✨ Beginner-friendly structure
+Allows calculations like age, updated credits, or extracted values using SQL expressions, without modifying stored data.
 
-🚀 Future Improvements
+🔹 Working with Dates
 
-🔸 Add advanced joins
-🔸 Include aggregation functions
-🔸 Build mini database project
+Date functions are used to calculate age, extract year, or compare dates.
+
+📂 Lab Work Breakdown
+Part A: Displaying data using meaningful aliases
+
+Part B: Applying conditions using WHERE
+
+Part C: Sorting and limiting output
+
+Part D: Creating computed columns and derived results
+
+✅ Conclusion
+This project builds a strong foundation in basic SQL data retrieval techniques. It is useful for beginners to understand how databases are queried in real-world applications while keeping data safe and unchanged.
