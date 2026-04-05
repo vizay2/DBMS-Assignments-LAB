@@ -31,3 +31,41 @@ The objective of this lab is to understand how to summarize and analyze data usi
 ```sql
 SELECT COUNT(*) AS Total_Students
 FROM Student;
+
+🧪 Lab Tasks
+🅰️ Part A: Basic Aggregate Queries
+
+✔ Total students
+✔ Total faculty
+✔ Total courses
+✔ Maximum credits
+✔ Minimum credits
+
+🅱️ Part B: GROUP BY (Single Table)
+
+✔ Students per department
+✔ Faculty per department
+✔ Courses per department
+✔ Enrollments per semester
+✔ Students per grade
+
+🅲 Part C: GROUP BY with HAVING
+
+✔ Departments with > 3 students
+✔ Semesters with > 2 enrollments
+✔ Grades assigned to multiple students
+✔ Departments with multiple courses
+
+🅳 Part D: Aggregation with JOIN
+
+✔ Students per course
+✔ Course name with enrolled students
+✔ Students per department
+✔ Faculty with number of courses taught
+
+🅴 Part E: Analytical Queries
+
+✔ Maximum grade per course
+✔ Courses per department
+✔ Students per semester
+✔ Courses with more than 2 students
