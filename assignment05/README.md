@@ -1,3 +1,66 @@
+# DBMS Lab 5 – Data Retrieval Using JOIN
+
+This repository contains SQL queries and explanations for **DBMS Lab 5**, which focuses on retrieving data from multiple related tables using **INNER JOIN**.
+
+The lab demonstrates how relational databases combine information from different tables using **primary–foreign key relationships**.
+
+---
+
+## Objective
+
+The objective of this lab is to:
+
+- Understand how relational databases store data in multiple tables
+- Learn how to retrieve combined information using **INNER JOIN**
+- Use **primary key – foreign key relationships**
+- Improve SQL query readability using **table aliases**
+- Practice writing SQL queries involving multiple tables
+
+---
+
+## Concepts Covered
+
+### 1. JOIN in Relational Databases
+
+In relational databases, data is usually stored across multiple tables to reduce redundancy.
+
+For example:
+
+- **Student Table** → stores student details  
+- **Course Table** → stores course information  
+- **Enrollment Table** → stores which student enrolled in which course  
+
+To retrieve meaningful information (such as *student name with course name*), we use **JOIN operations**.
+
+---
+
+### 2. INNER JOIN
+
+`INNER JOIN` returns only the rows where there is a matching value in both tables.
+
+Example:
+
+```sql
+SELECT Student.Name, Enrollment.CourseID
+FROM Student
+INNER JOIN Enrollment
+ON Student.StudentID = Enrollment.StudentID;
+```
+
+This query displays students who are enrolled in courses.
+
+---
+
+### 3. JOIN Condition
+
+A JOIN condition defines how two tables are related.
+
+Usually it connects:
+
+- **Primary Key of one table**
+- **Foreign Key of another table**
+
+Example:
 
 ```
 Student.StudentID = Enrollment.StudentID
@@ -105,3 +168,4 @@ This query retrieves **student names and course names** by combining three table
 - JOIN conditions must be correct.
 - Queries should **not modify the database structure or stored data**.
 - Queries are **read-only operations**.
+
