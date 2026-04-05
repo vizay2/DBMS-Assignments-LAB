@@ -1,4 +1,4 @@
-# 📚DBMS Lab 2
+# 📚DBMS LAB 2
 ## 📌 Objective
 This project demonstrates the design of a College Database System using ER modeling and its conversion into relational tables with SQL implementation.
 The aim is to understand entities, relationships, primary keys, foreign keys, and handling many-to-many relationships.
