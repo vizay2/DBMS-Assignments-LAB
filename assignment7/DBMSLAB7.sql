@@ -1,6 +1,5 @@
--- Part A: Basic Subqueries
-
--- 
+------------------------------ Part A: Basic Subqueries----------------------------
+--------------QUESTION 01--------------
 SELECT Name
 FROM Student
 WHERE DepartmentID = (
@@ -8,8 +7,7 @@ WHERE DepartmentID = (
     FROM Student
     WHERE StudentID = '23741'
 );
-
--- 2. Display students who have the same gender as student 'S402'.
+--------------QUESTION 02--------------
 SELECT *
 FROM Student
 WHERE Gender = (
@@ -18,7 +16,7 @@ WHERE Gender = (
     WHERE StudentID = '23741'
 );
 
--- 3. Display students belonging to the same department as 'S403'.
+--------------QUESTION 03--------------
 SELECT *
 FROM Student
 WHERE DepartmentID = (
@@ -28,9 +26,9 @@ WHERE DepartmentID = (
 );
 
 
--- Part B: Subqueries with IN
+-- ----------------------------Part B: Subqueries with IN----------------------------
 
--- 4. Display students whose DepartmentID exists where Gender is 'Female'.
+--------------QUESTION 04--------------
 SELECT *
 FROM Student
 WHERE DepartmentID IN (
@@ -39,7 +37,7 @@ WHERE DepartmentID IN (
     WHERE Gender = 'F'
 );
 
--- 5. Display students whose StudentID appears in the Enrollment table.
+--------------QUESTION 05--------------
 SELECT *
 FROM Student
 WHERE StudentID IN (
@@ -47,7 +45,7 @@ WHERE StudentID IN (
     FROM Enrollment
 );
 
--- 6. Display students who are enrolled in any course.
+--------------QUESTION 06--------------
 SELECT *
 FROM Student
 WHERE EXISTS (
@@ -57,26 +55,23 @@ WHERE EXISTS (
 );
 
 
--- Part C: Subqueries with Aggregate Functions
+------------------------------ Part C: Subqueries with Aggregate Functions----------------------------
 
--- 7. Display courses having credits greater than average credits.
+--------------QUESTION 07--------------
 SELECT *
 FROM Course
 WHERE Credits > (
     SELECT AVG(Credits)
     FROM Course
 );
-
--- 8. Display students whose StudentID is greater than the average StudentID
--- (assume numeric comparison).
+--------------QUESTION 08--------------
 SELECT *
 FROM Student
 WHERE StudentID > (
     SELECT AVG(StudentID)
     FROM Student
 );
-
--- 9. Display departments having more students than the average number of students per department.
+--------------QUESTION 09--------------
 SELECT DepartmentID
 FROM Student
 GROUP BY DepartmentID
@@ -90,25 +85,22 @@ HAVING COUNT(*) > (
 );
 
 
--- Part D: Subqueries Instead of JOIN
-
--- 10. Display names of students who are enrolled in courses (without using JOIN).
+------------------------------ Part D: Subqueries Instead of JOIN----------------------------
+--------------QUESTION 10--------------
 SELECT Name
 FROM Student
 WHERE StudentID IN (
     SELECT StudentID
     FROM Enrollment
 );
-
--- 11. Display students who are allocated to any department (using subquery logic).
+--------------QUESTION 11--------------
 SELECT *
 FROM Student
 WHERE DepartmentID IN (
     SELECT DepartmentID
     FROM Department
 );
-
--- 12. Display courses that have at least one student enrolled.
+--------------QUESTION 12--------------
 SELECT *
 FROM Course
 WHERE CourseID IN (
@@ -117,17 +109,15 @@ WHERE CourseID IN (
 );
 
 
--- Part E: Analytical Subqueries
-
--- 13. Display the course with maximum credits.
+-- ----------------------------Part E: Analytical Subqueries----------------------------
+--------------QUESTION 13--------------
 SELECT *
 FROM Course
 WHERE Credits = (
     SELECT MAX(Credits)
     FROM Course
 );
-
--- 14. Display students who are enrolled in more than one course.
+--------------QUESTION 14--------------
 SELECT *
 FROM Student
 WHERE StudentID IN (
@@ -137,7 +127,7 @@ WHERE StudentID IN (
     HAVING COUNT(CourseID) > 1
 );
 
--- 15. Display departments having the maximum number of students.
+--------------QUESTION 15--------------
 SELECT DepartmentID
 FROM Student
 GROUP BY DepartmentID
@@ -151,9 +141,9 @@ HAVING COUNT(*) = (
 );
 
 
--- Part F: Challenging Questions
+-- ----------------------------Part F: Challenging Questions----------------------------
 
--- 16. Display students who are enrolled in the same course as student 'S401'.
+--------------QUESTION 16--------------
 SELECT *
 FROM Student
 WHERE StudentID IN (
@@ -166,16 +156,14 @@ WHERE StudentID IN (
     )
 )
 AND StudentID <> '23741';
-
--- 17. Display students who are not enrolled in any course.
+--------------QUESTION 17--------------
 SELECT *
 FROM Student
 WHERE StudentID NOT IN (
     SELECT StudentID
     FROM Enrollment
 );
-
--- 18. Display courses that have no students enrolled.
+--------------QUESTION 18--------------
 SELECT *
 FROM Course
 WHERE CourseID NOT IN (
