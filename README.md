@@ -45,26 +45,6 @@ Each folder represents one lab experiment and contains:
 
 ---
 
-## 📂 Repository Structure
-
-```text
-DBMS-Lab/
-│
-├── Lab-01/
-│   ├── queries.sql
-│   ├── output.png
-│   └── README.md
-│
-├── Lab-02/
-│   ├── queries.sql
-│   ├── output.png
-│   └── README.md
-│
-└── README.md
-```
-
-Each lab folder is independent and self-explanatory.
-
 ---
 
 ## 🎯 Learning Outcomes
