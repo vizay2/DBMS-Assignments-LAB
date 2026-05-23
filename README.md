@@ -22,6 +22,16 @@ Each folder represents one lab experiment and contains:
 - SQL queries
 - Output screenshots
 - A separate README explaining the experiment
+| Lab No | Experiment Title |
+| :--- | :--- |
+| 1 | SQL Questions (DDL + DML) OPERATION |
+| 2 | Lab-02_ER_Model |
+| 3 | Lab-03_Database_Implementation |
+| 4 | Lab-04_Data_Retrieval_Using_SQL |
+| 5 | Lab-05_Data_Retrieval_From_Multiple_Tables_Using_Joins |
+| 6 | Lab-06_Data_Aggregation_Using_Group_By_and_Having |
+| 7 | Lab-07_Subqueries_Nested_Queries |
+
 
 | Lab No | Experiment Title |
 |------|------------------|
